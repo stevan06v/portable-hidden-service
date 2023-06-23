@@ -34,12 +34,21 @@ or just use this template repo.
 
 Run the docker-daemon and double click the start.cmd-file.
 
+Open your tor-client and access the output hidden-service-url 
+
+Example output: `http://s5buptadf6hhh4dyfi6fah2stjrpz2ovdkquwv4xmjgrkzdmyhnciaqd.onion/`
+
 ** In case you are working on a linux based machine:
 
 [source,bash]
 ----
 bash start.sh
 ----
+
+Open your tor-client and access the output hidden-service-url 
+
+Example output: `http://s5buptadf6hhh4dyfi6fah2stjrpz2ovdkquwv4xmjgrkzdmyhnciaqd.onion/`
+
 
 ==== Use it in your project
 * COPY the DOCKERFILE out of `my-next-app`:
@@ -48,10 +57,9 @@ bash start.sh
 mv ./my-next-app/Dockerfile ./
 ----
 * Remove `/my-next-app/`
-
 * Create a new project 
 * COPY the DOCKERFILE into the new project 
-* Rename `build: ./my-next-app/` in the docker-compose-file to your new project folder.
+* Rename `build: ./my-next-app/` in the docker-compose-file to your new project folder
 ** For the folder `/example` it would be  `build: ./example`
 
 
