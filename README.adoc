@@ -1,0 +1,57 @@
+= Deploy nextjs-application via hidden-service to the tor-network 
+Stevan Vlajic
+1.0.0, {docdate}: stevan06v
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+:experimental:
+
+== Next.js App on Tor Hidden Service
+
+This repository contains a Next.js application that is deployed via a Tor hidden service to the dark web.
+
+=== About
+
+The Next.js app showcases the power and flexibility of the Next.js framework, providing a robust and performant web application. By utilizing a Tor hidden service, the app can be accessed anonymously through the dark web, offering enhanced privacy and security.
+
+=== Getting Started
+
+To run the Next.js app locally, follow these steps:
+
+* Clone the repository:
+
+[source,bash]
+----
+git clone https://github.com/Stevan06v/nextjs-hidden-service.git
+----
+
+or just use this template repo.
+
+* Run the application:
+** In case you are working on a windows machine:
+
+Run the docker-daemon and double click the start.cmd-file.
+
+** In case you are working on a linux based machine:
+
+[source,bash]
+----
+bash start.sh
+----
+
+==== Use it in your project
+* COPY the DOCKERFILE out of `my-next-app`:
+[source,bash]
+----
+mv ./my-next-app/Dockerfile ./
+----
+* Remove `/my-next-app/`
+
+* Create a new project 
+* COPY the DOCKERFILE into the new project 
+* Rename `build: ./my-next-app/` in the docker-compose-file to your new project folder.
+** For the folder `/example` it would be  `build: ./example`
+
+

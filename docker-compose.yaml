@@ -1,0 +1,25 @@
+services:
+  tor:
+    container_name: hidden-service
+    build: ./tor/
+    depends_on:
+      - webserver
+    networks:
+      - my-network
+
+  webserver:
+    container_name: next-js-application
+    build: ./my-next-app/
+    networks:
+      my-network:
+        ipv4_address: 172.18.0.6
+
+
+networks:
+  my-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/16
+          gateway: 172.18.0.1
