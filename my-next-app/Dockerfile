@@ -2,7 +2,7 @@ FROM node:latest
 
 MAINTAINER GIT
 
-WORKDIR /dreamer-bay-frontend/#
+WORKDIR /app
 
 COPY . .
 
